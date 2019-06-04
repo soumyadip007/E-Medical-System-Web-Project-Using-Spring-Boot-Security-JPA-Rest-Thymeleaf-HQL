@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
   <head>
 
 	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
@@ -200,8 +199,12 @@
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
+          <form class="login100-form validate-form"  th:action="@{/logout}"  method="POST">
+					
+	
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="Logout">Logout</a>
+            <a class="btn btn-primary" href="logout">Logout</a>
+            </form>
           </div>
         </div>
       </div>
