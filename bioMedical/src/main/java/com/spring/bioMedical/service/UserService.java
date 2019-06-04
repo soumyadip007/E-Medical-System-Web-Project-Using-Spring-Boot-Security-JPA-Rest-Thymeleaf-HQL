@@ -1,10 +1,10 @@
-package com.security.email.service;
+package com.spring.bioMedical.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.security.email.entity.User;
-import com.security.email.repository.UserRepository;
+import com.spring.bioMedical.entity.User;
+import com.spring.bioMedical.repository.UserRepository;
 
 @Service("userService")
 public class UserService {

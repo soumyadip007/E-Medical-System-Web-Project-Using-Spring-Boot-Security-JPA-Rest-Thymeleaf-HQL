@@ -1,4 +1,4 @@
-package com.security.email.entity;
+package com.spring.bioMedical.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

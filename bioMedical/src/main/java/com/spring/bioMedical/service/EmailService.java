@@ -1,4 +1,4 @@
-package com.security.email.service;
+package com.spring.bioMedical.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

@@ -1,9 +1,9 @@
-package com.security.email.repository;
+package com.spring.bioMedical.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.security.email.entity.User;
+import com.spring.bioMedical.entity.User;
 
 @Repository("userRepository")
 public interface UserRepository extends CrudRepository<User, Long> {

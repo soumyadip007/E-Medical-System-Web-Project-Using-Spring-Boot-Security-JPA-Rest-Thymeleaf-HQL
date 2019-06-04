@@ -1,4 +1,4 @@
-package com.security.email.config;
+package com.spring.bioMedical.config;
 
 import javax.sql.DataSource;
 

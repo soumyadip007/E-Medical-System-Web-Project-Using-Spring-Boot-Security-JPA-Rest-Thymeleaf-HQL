@@ -1,4 +1,4 @@
-package com.security.email.controller;
+package com.spring.bioMedical.Controller;
 
 import java.util.Map;
 import java.util.UUID;
@@ -19,9 +19,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.nulabinc.zxcvbn.Strength;
 import com.nulabinc.zxcvbn.Zxcvbn;
-import com.security.email.entity.User;
-import com.security.email.service.EmailService;
-import com.security.email.service.UserService;
+import com.spring.bioMedical.entity.User;
+import com.spring.bioMedical.service.EmailService;
+import com.spring.bioMedical.service.UserService;
 
 @Controller
 public class RegisterController {
