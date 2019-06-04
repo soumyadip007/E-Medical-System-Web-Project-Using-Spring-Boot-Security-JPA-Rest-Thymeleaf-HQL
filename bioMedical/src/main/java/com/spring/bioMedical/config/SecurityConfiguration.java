@@ -52,6 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/").hasAnyRole("ADMIN")
 			.antMatchers("/register").permitAll()
 			.antMatchers("/confirm").permitAll()
+			.antMatchers("/login/**").permitAll()
 			.antMatchers("/css/**").permitAll()
 			.antMatchers("/js/**").permitAll()
 			.antMatchers("/static/**").permitAll()
@@ -76,7 +77,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 	
-		web.ignoring().antMatchers("/resources/**","/static/**","/Script/**","/Style/**","/Icon/**",
+		web.ignoring().antMatchers("/resources/**","/login/**","/static/**","/Script/**","/Style/**","/Icon/**",
 				"/js/**","/bootstrap/**","/Image/**");
 		
 		//logoutSuccessUrl("/customLogout")
