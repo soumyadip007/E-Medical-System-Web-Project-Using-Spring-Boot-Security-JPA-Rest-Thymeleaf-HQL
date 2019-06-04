@@ -48,6 +48,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/").hasAnyRole("ADMIN")
 			.antMatchers("/register").permitAll()
 			.antMatchers("/confirm").permitAll()
+
 			.antMatchers("/css/**").permitAll()
 			.antMatchers("/js/**").permitAll()
 			.antMatchers("/static/**").permitAll()
@@ -57,7 +58,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.formLogin()
 			.loginPage("/showMyLoginPage")
 			.loginProcessingUrl("/authenticateTheUser")
-			.defaultSuccessUrl("/")
+			.defaultSuccessUrl("/register")
 			.permitAll()
 		.and()
 		.logout().permitAll()
