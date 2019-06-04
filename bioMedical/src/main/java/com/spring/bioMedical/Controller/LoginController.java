@@ -23,16 +23,16 @@ public class LoginController {
 		return "user/success";
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping("/user")
 	public String x(){
 		
-		return "";
+		return "user/success";
 	}
 
 	@RequestMapping("/admin")
 	public String x1(){
 		
-		return "user/success";
+		return "admin/success";
 	}
 	
 	@RequestMapping("/index")
