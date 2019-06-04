@@ -73,44 +73,28 @@
        <li class="nav-item active">
           <a class="nav-link" href="Control.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Disaster Dashboard</span>
+            <span>User Details</span>
           </a>
         </li>
 	 <li class="nav-item  ">
           <a class="nav-link" href="http://localhost/webapp/user-map.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Disaster Map</span>
+            <span>Doctor Details</span>
           </a>
         </li>
           <li class="nav-item  ">
           <a class="nav-link " href="ControlSafety.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Women Safety</span>
+            <span>Add doctor</span>
           </a>
         </li>
          </li>
           <li class="nav-item  ">
           <a class="nav-link " href="http://localhost/webapp/womenmap.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Women Map</span>
+            <span>Add Admin</span>
           </a>
         </li>
-       <!--  <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
-          </div>
-        </li>--> 
       
       </ul>
 
@@ -155,17 +139,10 @@
                     <tr>
                      	<th>Id</th>
                       <th>Name</th>
-                      <th>type</th>
+                      <th>Email</th>
                          <th>Age</th>
                       <th>Blood Group</th>
-                      <th>Phone</th>
-                      <th>Get Location</th>
-                      <th>Police Station</th>
-                       <th>Fire Brigade</th>
-                        <th>Hospital</th>
-                        <th>Time</th>
-                       <th>Lattitude</th>
-                      <th>Longitude</th>
+                     
                       
                     </tr>
                   </thead>
@@ -176,68 +153,10 @@
                           <th>type</th>
                          <th>Age</th>
                       <th>Blood Group</th>
-                      <th>Phone</th>
-                      <th>Get Location</th>
-                      <th>Police Station</th>
-                       <th>Fire Brigade</th>
-                        <th>Hospital</th>
-                        <th>Time</th>
-                       <th>Lattitude</th>
-                      <th>Longitude</th>
-                    </tr>
-                  <tbody>
-        
-          <%String data,user,pass;%>
-       <%
-       ServletContext ct=getServletContext();
-	  data=ct.getInitParameter("path");
-	  user=ct.getInitParameter("user");
-	  pass=ct.getInitParameter("pass");
-	  %>
-       
-          <sql:setDataSource
-	        var="con"
-	        driver="com.mysql.jdbc.Driver"
-	       url="<%=data %>"
-	        user="<%=user %>" 
-	        password="<%=pass %>"  /> 
-	    
-	
-	     
-	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM hack ;
-	    </sql:query>
-    
-    
-                    <c:forEach var="user"
-                     items="${listUsers.rows}">
-           
-                    <tr>
-                   
-                         <td><strong>${user.id}<strong></strong></td>
-                      <td>${user.name}</td>
-                         <td>${user.type}</td>
-                      <td>${user.age}</td>
-                      <td>${user.blood}</td>
-                      <td>${user.ph}</td>
-                       
-            <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
-                  
-                     <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:Crimson ;">Police Station</a></strong></td>
-                 
-               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
-                   
-                     <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LimeGreen ;">Hospital</a></strong></td>
-                
-                      <td>${user.time}</td>
-                      <td>${user.latt}</td>
-                      
-                        <td>${user.longi}</td>
                      
                     </tr>
-                  
-                </c:forEach>
-                  
+                  <tbody>
+       
                   </tbody>
                 </table>
               </div>
