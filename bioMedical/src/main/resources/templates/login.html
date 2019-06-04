@@ -1,0 +1,55 @@
+ 
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Custom Login</title>
+<link
+  href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous" />
+
+	<link th:href="@{css/style.css}" rel="stylesheet" />
+		<style>
+		.failed {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+<h2>Custom Login</h2>
+
+<br>
+<div class="container">
+  <div class="row"> 
+   <div class="col-sm">
+   
+   
+   
+    <h4>Login</h4>
+
+      <form   th:action="@{/authenticateTheUser}"  method="POST">
+
+		
+          
+          <input type="text" name="username"
+            placeholder="Email" class="form-control" required />
+       
+          
+          <input type="password" name="password"
+            placeholder="Password" class="form-control" required />
+       
+
+        <button type="submit"
+          class="btn btn-primary block full-width m-b">Login</button>
+
+      </form>
+   
+</div>
+</div>
+</div>
+</body>
+</html>
