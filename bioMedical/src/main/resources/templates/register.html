@@ -30,7 +30,7 @@
       
       <hr />
 
-      <h4>New User Registration</h4>
+      <h4>User Registration</h4>
 
       <form autocomplete="off" action="#" th:action="@{/register}"
         th:object="${user}" method="post" class="m-t" role="form"
@@ -53,6 +53,7 @@
           th:errors="*{lastName}"
           class="validation-message alert alert-danger" role="alert"></div>
 
+ 
 
         <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
           class="validation-message alert alert-danger" role="alert"></div>

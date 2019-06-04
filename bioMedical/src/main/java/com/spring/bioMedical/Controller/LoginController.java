@@ -20,7 +20,7 @@ public class LoginController {
 	public String shwHome()
 	{
 		
-		return "success";
+		return "user/success";
 	}
 	
 	@RequestMapping("/")
@@ -32,13 +32,13 @@ public class LoginController {
 	@RequestMapping("/admin")
 	public String x1(){
 		
-		return "success";
+		return "user/success";
 	}
 	
 	@RequestMapping("/index")
 	public String x11(){
 		
-		return "success";
+		return "user/success";
 	}
 
 }
