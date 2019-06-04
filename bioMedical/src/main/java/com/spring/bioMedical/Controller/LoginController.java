@@ -26,6 +26,18 @@ public class LoginController {
 	@RequestMapping("/")
 	public String x(){
 		
+		return "";
+	}
+
+	@RequestMapping("/admin")
+	public String x1(){
+		
+		return "success";
+	}
+	
+	@RequestMapping("/index")
+	public String x11(){
+		
 		return "success";
 	}
 

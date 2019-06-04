@@ -21,6 +21,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource securityDataSource;
 	
+	@Autowired
+	private CustomAuthenticationSuccessHandler successHandler;
+	
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
@@ -48,7 +52,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.antMatchers("/").hasAnyRole("ADMIN")
 			.antMatchers("/register").permitAll()
 			.antMatchers("/confirm").permitAll()
-
 			.antMatchers("/css/**").permitAll()
 			.antMatchers("/js/**").permitAll()
 			.antMatchers("/static/**").permitAll()
@@ -60,6 +63,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.loginProcessingUrl("/authenticateTheUser")
 			.defaultSuccessUrl("/register")
 			.permitAll()
+			.successHandler(successHandler)
 		.and()
 		.logout().permitAll()
 		.and()
@@ -89,6 +93,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		return jdbcUserDetailsManager; 
 	}
 		
+	
+	
 }
 
 class PasswordEnconderTest implements PasswordEncoder {
