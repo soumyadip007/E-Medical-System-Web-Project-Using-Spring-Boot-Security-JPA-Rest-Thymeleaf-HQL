@@ -31,6 +31,7 @@ public class AdminController {
 		for (User user : list) {
 			
 			System.out.println(user);
+			
 		}
 		
 		// add to the spring model
