@@ -15,25 +15,14 @@ public class LoginController {
 	}
 
 	
-
+/*
 	@RequestMapping("/authenticateTheUser")
 	public String shwHome()
 	{
 		
 		return "user/success";
-	}
+	}*/
 	
-	@RequestMapping("/user")
-	public String x(){
-		
-		return "user/success";
-	}
-
-	@RequestMapping("/admin")
-	public String x1(){
-		
-		return "admin/success";
-	}
 	
 	@RequestMapping("/index")
 	public String x11(){
