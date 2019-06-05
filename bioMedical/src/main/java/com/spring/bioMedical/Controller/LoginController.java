@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 
 
-	@RequestMapping("/showMyLoginPage")
+	@RequestMapping("/login")
 	public String showHome()
 	{
 		
