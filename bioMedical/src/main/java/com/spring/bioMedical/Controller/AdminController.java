@@ -63,5 +63,15 @@ public class AdminController {
 		
 		return "admin/admin";
 	}
+	
+	
+	@RequestMapping("/add-doctor")
+	public String addDoctor(){
+		
+
+		
+		
+		return "admin/addDoctor";
+	}
 
 }
