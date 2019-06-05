@@ -22,12 +22,6 @@ public class LoginController {
 		
 		return "user/success";
 	}*/
-	
-	
-	@RequestMapping("/inex")
-	public String x11(){
-		
-		return "user/success";
-	}
+
 
 }
