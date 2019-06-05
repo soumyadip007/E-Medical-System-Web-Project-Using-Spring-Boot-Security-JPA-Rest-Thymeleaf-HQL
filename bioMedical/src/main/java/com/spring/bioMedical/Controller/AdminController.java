@@ -46,5 +46,20 @@ public class AdminController {
 		
 		return "admin/user";
 	}
+	
+	@RequestMapping("/admindetails")
+	public String adminDetails(Model model){
+		
+		
+		List<User> list=userService.findAll();
+		
+		
+		
+		// add to the spring model
+		model.addAttribute("user", list);
+		
+		
+		return "admin/admin";
+	}
 
 }
