@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.spring.bioMedical.entity.Admin;
 import com.spring.bioMedical.entity.User;
 
-@Repository("userRepository")
+@Repository("adminRepository")
 public interface AdminRepository extends JpaRepository<Admin, Long> {
 	
 }

@@ -1,25 +1,27 @@
 package com.spring.bioMedical.Controller;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.spring.bioMedical.entity.User;
+import com.spring.bioMedical.entity.*;
+import com.spring.bioMedical.service.AdminServiceImplementation;
 import com.spring.bioMedical.service.UserService;
-
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
 
 	private UserService userService;
 
+	private AdminServiceImplementation adminServiceImplementation;
+	
 	@Autowired
-	public AdminController(UserService userService) {
+	public AdminController(UserService userService,AdminServiceImplementation obj ) {
 		this.userService = userService;
+		adminServiceImplementation=obj;
 	}
 	
 	
@@ -51,7 +53,7 @@ public class AdminController {
 	public String adminDetails(Model model){
 		
 		
-		List<User> list=userService.findAll();
+		List<com.spring.bioMedical.entity.Admin> list=adminServiceImplementation.findAll();
 		
 		
 		
