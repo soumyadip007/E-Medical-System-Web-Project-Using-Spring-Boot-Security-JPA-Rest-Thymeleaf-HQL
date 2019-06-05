@@ -9,7 +9,7 @@ public class AdminController {
 
 
 
-	@RequestMapping("/dashboard/index")
+	@RequestMapping("/index")
 	public String index(){
 		
 		return "admin/success";
