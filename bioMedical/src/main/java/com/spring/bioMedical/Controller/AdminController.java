@@ -1,6 +1,7 @@
 package com.spring.bioMedical.Controller;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,10 +29,15 @@ public class AdminController {
 		
 		List<User> list=userService.findAll();
 		
+		
+		
 		for (User user : list) {
-			
-			System.out.println(user);
-			
+		
+//			 if (user.getRole().equalsIgnoreCase("ROLE_ADMIN")) {
+//			        list.remove(user);
+//			    }
+//		//	System.out.println(user);
+//			
 		}
 		
 		// add to the spring model
