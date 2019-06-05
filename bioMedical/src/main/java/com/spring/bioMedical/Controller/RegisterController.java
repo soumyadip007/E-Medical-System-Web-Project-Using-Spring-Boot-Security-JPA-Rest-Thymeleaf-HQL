@@ -39,6 +39,7 @@ public class RegisterController {
 	
 	// Return registration form template
 	@RequestMapping(value="/register", method = RequestMethod.GET)
+
 	public ModelAndView showRegistrationPage(ModelAndView modelAndView, User user){
 		modelAndView.addObject("user", user);
 		modelAndView.setViewName("register");

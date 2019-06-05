@@ -24,7 +24,7 @@ public class LoginController {
 	}*/
 	
 	
-	@RequestMapping("/index")
+	@RequestMapping("/inex")
 	public String x11(){
 		
 		return "user/success";
