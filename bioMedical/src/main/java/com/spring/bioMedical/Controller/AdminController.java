@@ -22,7 +22,7 @@ public class AdminController {
 	}
 	
 	
-	@RequestMapping("/index")
+	@RequestMapping("/userdetails")
 	public String index(Model model){
 		
 		
@@ -38,7 +38,7 @@ public class AdminController {
 		model.addAttribute("user", list);
 		
 		
-		return "admin/success";
+		return "admin/user";
 	}
 
 }
