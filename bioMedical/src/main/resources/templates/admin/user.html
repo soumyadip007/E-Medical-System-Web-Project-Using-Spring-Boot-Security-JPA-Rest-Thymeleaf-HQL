@@ -162,25 +162,15 @@
                   <tbody>
        	<tr th:each="temp : ${user}">
        	
-    <!--  		<td th:if="${temp.role != 'ROLE_ADMIN' }" th:text="${temp.id}" />	
+  		<td th:if="${temp.role != 'ROLE_ADMIN' }" th:text="${temp.id}" />	
 				<td  th:if="${temp.role != 'ROLE_ADMIN' }"  th:text="${temp.firstName}" />	
 				 <td  th:if="${temp.role != 'ROLE_ADMIN' }"  th:text="${temp.lastName}"/>
 				<td   th:if="${temp.role != 'ROLE_ADMIN' }"  th:text="${temp.email}" />	
 					<td  th:if="${temp.role != 'ROLE_ADMIN' }"  th:text="${temp.gender}" />	
 				<td  th:if="${temp.role != 'ROLE_ADMIN' }"  th:text="${temp.role}" />	
-		-->   
 		
-		<div th:if="${temp.role != 'ROLE_ADMIN' }" 	>
+
 		
-				<td   th:text="${temp.id}" />	
-				<td   th:text="${temp.firstName}" />	
-				<td    th:text="${temp.lastName}"/>
-				<td  th:text="${temp.email}" />	
-				<td   th:text="${temp.gender}" />	
-				<td  th:text="${temp.role}" />	
-	
-		
-		</div>	
 				</tr>
        
                   </tbody>
