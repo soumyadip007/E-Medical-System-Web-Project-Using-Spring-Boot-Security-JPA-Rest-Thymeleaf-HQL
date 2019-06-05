@@ -35,7 +35,7 @@ public class AdminController {
 		}
 		
 		// add to the spring model
-		//theModel.addAttribute("employees", list);
+		model.addAttribute("user", list);
 		
 		
 		return "admin/success";
