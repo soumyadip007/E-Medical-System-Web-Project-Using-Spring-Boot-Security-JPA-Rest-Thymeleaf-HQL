@@ -35,11 +35,11 @@ public class UserService {
 	
 	public List<User> findAll() {
 		
-		/*EntityManager em = null;
+		EntityManager em = null;
 	
-		  TypedQuery<String> query = em.createQuery(
-			      "SELECT * FROM User AS c WHERE c.role =: ROLE_ADMIN", String.class);
-	*/	return userRepository.findAll();
+//		  TypedQuery<String> query = em.createQuery(
+//			      "SELECT * FROM User AS c WHERE c.role =: ROLE_ADMIN", String.class);
+		return userRepository.findAll();
 	}
 
 }
