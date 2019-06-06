@@ -68,7 +68,7 @@ public class RegisterController {
 			// Disable user until they click on confirmation link in email
 		    
 			user.setEnabled(false);
-			user.setRole("ROLE_ADMIN");
+			user.setRole("ROLE_USER");
 		      
 			
 		    // Generate random 36-character string token for confirmation link
