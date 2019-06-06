@@ -124,8 +124,9 @@
       
 	
 	<div>
-	<form action="job"  method="post">
-	<table>
+	
+		<form  th:action="@{/admin/save-doctor}"
+						 th:object="${doctor}" method="POST"><table>
 	
 	<tr>
 	
@@ -134,26 +135,26 @@
 	
 	<tr>
 	<td><br><dt class="col-sm-3">First Name:</dt></td>
-	<td><br><input type="text" name="title"  class="form-control" required="" placeholder="First Name"></td>
+	<td><br><input type="text" th:field="*{firstName}"  class="form-control" required="" placeholder="First Name"></td>
 	</tr>
 	
 	
 	<tr>
 	
 	<td><br><br><dt class="col-sm-3">Last Name:</dt></td>
-	<td><br><input type="text" name="salary" required="" class="form-control" placeholder="Last Name"></td>
+	<td><br><input type="text" th:field="*{firstName}" required="" class="form-control" placeholder="Last Name"></td>
 	</tr>
 	
 	<tr>
 	
 	<td><br><br><dt class="col-sm-3">Email:</dt></td>
-	<td><br><input name="des" class="form-control" id=  required="" placeholder="Email"/><br></td>
+	<td><br><input th:field="*{email}"" class="form-control" id=  required="" placeholder="Email"/><br></td>
 	</tr>
 	
 	<tr>
 	
 	<td><br><br><dt class="col-sm-3">Role:</dt></td>
-	<td><br><input name="des" class="form-control"   required="" placeholder=Role/><br></td>
+	<td><br><input th:field="*{role}" class="form-control"   required="" placeholder=Role/><br></td>
 	</tr>
 	
 	<tr>
