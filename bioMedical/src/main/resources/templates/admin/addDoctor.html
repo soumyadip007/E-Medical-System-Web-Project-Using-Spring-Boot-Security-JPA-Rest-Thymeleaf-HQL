@@ -103,16 +103,11 @@
 
         <div class="container-fluid">
 
-          <!-- Breadcrumbs-->
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a href="AdminHome.jsp">Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
+         
 
           <!-- Icon Cards-->
-         
+       
+           
 
           <!-- Area Chart Example
           <div class="card mb-3">
@@ -126,7 +121,10 @@
           </div> -->
 
           <!-- DataTables Example -->
-        	<form action="job"  method="post">
+      
+	
+	<div>
+	<form action="job"  method="post">
 	<table>
 	
 	<tr>
@@ -134,22 +132,28 @@
 	</tr>
 	
 	
+	<tr>
+	<td><br><dt class="col-sm-3">First Name:</dt></td>
+	<td><br><input type="text" name="title"  class="form-control" required="" placeholder="First Name"></td>
+	</tr>
 	
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Last Name:</dt></td>
-	<td><br><input type="text" name="title"  class="form-control" required="" placeholder="Last Name"></td>
+	
+	<td><br><br><dt class="col-sm-3">Last Name:</dt></td>
+	<td><br><input type="text" name="salary" required="" class="form-control" placeholder="Last Name"></td>
 	</tr>
+	
 	<tr>
 	
 	<td><br><br><dt class="col-sm-3">Email:</dt></td>
-	<td><br><input type="text" name="salary" required="" class="form-control" placeholder="Email"/></td>
+	<td><br><input name="des" class="form-control" id=  required="" placeholder="Email"/><br></td>
 	</tr>
 	
 	<tr>
-	  	<td><br><br><dt class="col-sm-3">Role:</dt></td>
-	<td><br><input type="text" name="salary" required="" class="form-control" placeholder="Role"/></td>
 	
+	<td><br><br><dt class="col-sm-3">Role:</dt></td>
+	<td><br><input name="des" class="form-control"   required="" placeholder=Role/><br></td>
 	</tr>
 	
 	<tr>
@@ -159,20 +163,9 @@
 	
 	</table>
 	</form>
+</div>
 
-         
-
-        <!-- /.container-fluid -->
-
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright ©Soumyadip Spring-Boot-JPA 2019</span>
-            </div>
-          </div>
-        </footer>
-
+     
       </div>
       <!-- /.content-wrapper -->
 
@@ -183,6 +176,12 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
     </a>
+
+    <!-- Logout Modal-->
+   
+      <!-- /.content-wrapper -->
+
+    </div>
 
     <!-- Logout Modal-->
    
