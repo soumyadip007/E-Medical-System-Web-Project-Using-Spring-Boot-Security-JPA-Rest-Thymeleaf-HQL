@@ -11,7 +11,7 @@ public class UserController {
 	public String index(){
 
 		
-		return "user/success";
+		return "user/index";
 	}
 	
 	
