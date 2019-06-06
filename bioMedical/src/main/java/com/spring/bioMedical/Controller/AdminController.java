@@ -157,7 +157,7 @@ public class AdminController {
 		
 		// get the employee from the service
 		 Admin admin = adminServiceImplementation.findByEmail(username);
-		
+		 System.out.println(admin);
 		
 		theModel.addAttribute("profile", admin);
 		
