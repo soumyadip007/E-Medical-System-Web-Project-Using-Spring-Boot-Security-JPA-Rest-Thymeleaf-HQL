@@ -9,6 +9,6 @@ public interface AdminService {
 
 	public List<Admin> findAll();
 
-	public void save(User user);
+	public void save(Admin admin);
 	
 }
