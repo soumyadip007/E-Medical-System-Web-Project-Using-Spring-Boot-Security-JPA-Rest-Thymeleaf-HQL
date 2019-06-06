@@ -106,8 +106,8 @@ public class AdminController {
 	
 	
 
-	@GetMapping("/add-doctor")
-	public String showFormForAdd(Model theModel) {
+	@GetMapping("/add-admin")
+	public String showForm(Model theModel) {
 		
 		// create model attribute to bind form data
 		Admin admin = new Admin();
@@ -118,8 +118,8 @@ public class AdminController {
 	}
 	
 	
-	@PostMapping("/save-doctor")
-	public String saveEmployee(@ModelAttribute("doctor") Admin admin) {
+	@PostMapping("/save-admin")
+	public String saveEmploye(@ModelAttribute("doctor") Admin admin) {
 		
 		// save the employee
 	//	admin.setId(0);
