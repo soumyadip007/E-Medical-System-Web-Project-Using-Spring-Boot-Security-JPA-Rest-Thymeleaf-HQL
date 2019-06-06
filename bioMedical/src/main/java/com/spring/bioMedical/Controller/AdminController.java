@@ -88,7 +88,7 @@ public class AdminController {
 		// save the employee
 	//	admin.setId(0);
 		
-		admin.setGender("Male");
+		admin.setRole("ROLE_DOCTOR");
 		
 		admin.setPassword("default");
 		
