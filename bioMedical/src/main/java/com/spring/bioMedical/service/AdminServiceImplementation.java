@@ -29,7 +29,7 @@ public class AdminServiceImplementation implements AdminService {
 	public void save(Admin admin)
 	{
 		
-		
+		adminRepository.save(admin);
 	}
 
 	
