@@ -1,0 +1,36 @@
+/* Advanced progress bar */
+.bt_bb_progress_bar_advanced {
+	& > div {
+		position: relative;
+	}
+	.progressbar-text {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform: none !important;
+	}
+	&[data-container-type="semi-circle"] {
+		.progressbar-text {
+			margin-bottom: .5em;
+		}
+	}
+	.bt_bb_icon_holder {
+		&.bt_bb_size_small {
+			font-size: .75em;
+		}
+		&.bt_bb_size_normal {
+			font-size: 1em;
+		}
+		&.bt_bb_size_medium {
+			font-size: 1.5em;
+		}
+		&.bt_bb_size_large {
+			font-size: 2.25em;
+		}
+	}
+}

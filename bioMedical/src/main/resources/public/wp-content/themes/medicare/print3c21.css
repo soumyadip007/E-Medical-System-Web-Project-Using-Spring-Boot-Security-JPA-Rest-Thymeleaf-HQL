@@ -1,0 +1,184 @@
+/*
+
+Print css 
+
+*/
+@page {
+    size: 210mm 297mm;
+    margin: 0;
+    }
+* {
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    }
+#top.btPageWrap .boldRow {
+    width: 100% !important;
+    margin: 0 0 30px !important;
+    }
+#btBody #top.btPageWrap .rowItem {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 15px !important;
+    width: auto !important;
+    float: none !important;
+    display: block !important;
+    }
+#btBody #top.btPageWrap .rowItem:after {
+    display: none !important;
+    }
+#btBody #top.btPageWrap div[class*="col-"] {
+    width: auto !important;
+    float: none !important;
+    }
+section.boldSection {
+    background-image: none !important;
+    }
+#top.btPageWrap [class*="animate-"],
+#top.btPageWrap .animate {
+    opacity: 1 !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    animation: none !important;
+    }
+#top.btPageWrap header.mainHeader {
+    position: static;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+    }
+.mainHeader .port .menuHolder > *:not(.logo),
+.btFooterWrap .boldRow > *:not(.btFooterCopy),
+aside.btSidebar,
+.btSeparator,
+.btPagination,
+.btBtn,
+.fooWidgets,
+.btIconImageRow,
+.menu,
+.btSiteFooterWidgets {
+    display: none !important;
+    }
+img.btMainLogo {
+    display: block !important;
+    }
+img.btAltLogo {
+    display: none !important;
+    }
+.mainHeader .port .menuHolder > .logo {
+    margin: 0 auto 30px;
+    float: none;
+    }
+.mainHeader .port .menuHolder > .logo img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    }
+.btFooterCopy.btTextLeft {
+    text-align: center;
+    }
+:lightSkinSelector h1,
+:lightSkinSelector h2,
+:lightSkinSelector h3,
+:lightSkinSelector h4,
+:lightSkinSelector h5,
+:lightSkinSelector h6,
+:lightSkinSelector p,
+:lightSkinSelector ul,
+:lightSkinSelector ol,
+:lightSkinSelector li,
+:lightSkinSelector a,
+:darkSkinSelector h1,
+:darkSkinSelector h2,
+:darkSkinSelector h3,
+:darkSkinSelector h4,
+:darkSkinSelector h5,
+:darkSkinSelector h6,
+:darkSkinSelector p,
+:darkSkinSelector ul,
+:darkSkinSelector ol,
+:darkSkinSelector li,
+:darkSkinSelector a {
+    color: #000 !important;
+    opacity: 1;
+    }
+.rowItem .rowItemContent .servicesItem {
+    float: none !important;
+    display: block;
+    width: 100%;
+    }
+.col-md-0 {
+    width: 100%;
+    float: none;
+    }
+.col-md-1 {
+    width: 100%;
+    float: none;
+    }
+.col-md-2 {
+    width: 100%;
+    float: none;
+    }
+.col-md-3 {
+    width: 100%;
+    float: none;
+    }
+.col-md-4 {
+    width: 100%;
+    float: none;
+    }
+.col-md-5 {
+    width: 100%;
+    float: none;
+    }
+.col-md-6 {
+    width: 100%;
+    float: none;
+    }
+.col-md-7 {
+    width: 100%;
+    float: none;
+    }
+.col-md-8 {
+    width: 100%;
+    float: none;
+    }
+.col-md-9 {
+    width: 100%;
+    float: none;
+    }
+.col-md-10 {
+    width: 100%;
+    float: none;
+    }
+.col-md-11 {
+    width: 100%;
+    float: none;
+    }
+.col-md-12 {
+    width: 100%;
+    float: none;
+    }
+.servicesItem {
+    display: table;
+    width: 100%;
+    }
+.servicesItem .sIcon,
+.servicesItem .sTxt {
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+    }
+.servicesItem .sIcon {
+    width: 1px;
+    }
+.btTextLeft .sTxt,
+.btTextRight .sTxt {
+    float: none !important;
+    }
