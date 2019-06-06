@@ -78,7 +78,7 @@ public class AdminController {
 		
 		theModel.addAttribute("doctor", admin);
 		
-		return "addDoctor";
+		return "admin/addDoctor";
 	}
 	
 	
@@ -86,17 +86,22 @@ public class AdminController {
 	public String saveEmployee(@ModelAttribute("doctor") Admin admin) {
 		
 		// save the employee
+	//	admin.setId(0);
+		
+		admin.setGender("Male");
 		
 		admin.setPassword("default");
 		
 		admin.setEnabled(true);
 		
-		admin.setConfirmationToken("ByAdmin");
+		admin.setConfirmationToken("ByAdmin-Panel");
+		
+		System.out.println(admin);
 		
 		adminServiceImplementation.save(admin);
 		
 		// use a redirect to prevent duplicate submissions
-		return "redirect:/admin/user";
+		return "redirect:/admin/userdetails";
 	}
 	
 	
