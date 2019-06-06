@@ -32,5 +32,13 @@ public class AdminServiceImplementation implements AdminService {
 		adminRepository.save(admin);
 	}
 
+	@Override
+	public Admin findByEmail(String user) {
+		// TODO Auto-generated method stub
+		
+		return adminRepository.findByEmail(user);
+		
+	}
+
 	
 }
