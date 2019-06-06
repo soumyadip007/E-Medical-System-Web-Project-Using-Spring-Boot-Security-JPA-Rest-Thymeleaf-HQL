@@ -114,7 +114,7 @@ public class AdminController {
 		
 		theModel.addAttribute("doctor", admin);
 		
-		return "admin/addDoctor";
+		return "admin/addAdmin";
 	}
 	
 	
@@ -124,7 +124,7 @@ public class AdminController {
 		// save the employee
 	//	admin.setId(0);
 		
-		admin.setRole("ROLE_DOCTOR");
+		admin.setRole("ROLE_ADMIN");
 		
 		admin.setPassword("default");
 		
