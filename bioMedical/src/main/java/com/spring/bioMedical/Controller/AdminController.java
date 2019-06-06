@@ -165,7 +165,7 @@ public class AdminController {
 	}
 			
 	
-	@PostMapping("/save-admin")
+	@PostMapping("/update")
 	public String update(@ModelAttribute("profile") Admin admin) {
 		
 		
