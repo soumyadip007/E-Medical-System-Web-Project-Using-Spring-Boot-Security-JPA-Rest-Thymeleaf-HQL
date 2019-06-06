@@ -163,5 +163,19 @@ public class AdminController {
 		
 		return "admin/updateMyProfile";
 	}
+			
+	
+	@PostMapping("/save-admin")
+	public String update(@ModelAttribute("profile") Admin admin) {
+		
+		
+		System.out.println(admin);
+		
+		adminServiceImplementation.save(admin);
+		
+		// use a redirect to prevent duplicate submissions
+		return "redirect:/admin/userdetails";
+	}
+	
 	
 }
