@@ -3,16 +3,20 @@ package com.spring.bioMedical.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.spring.bioMedical.entity.*;
 import com.spring.bioMedical.service.AdminServiceImplementation;
 import com.spring.bioMedical.service.UserService;
+
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+	
 
 	private UserService userService;
 
@@ -65,13 +69,13 @@ public class AdminController {
 	}
 	
 	
-	@RequestMapping("/add-doctor")
-	public String addDoctor(){
+	@PostMapping("/add-doctor")
+	public String saveEmployee(@ModelAttribute("doctor") Admin admin) {
 		
-
+		// save the employee
+		adminServiceImplementation.save(admin);
 		
-		
-		return "admin/addDoctor";
+		// use a redirect to prevent duplicate submissions
+		return "redirect:/admin/user";
 	}
-
 }
