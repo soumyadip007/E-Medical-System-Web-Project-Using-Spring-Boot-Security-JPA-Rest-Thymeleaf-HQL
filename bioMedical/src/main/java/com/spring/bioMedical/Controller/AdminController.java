@@ -86,6 +86,13 @@ public class AdminController {
 	public String saveEmployee(@ModelAttribute("doctor") Admin admin) {
 		
 		// save the employee
+		
+		admin.setPassword("default");
+		
+		admin.setEnabled(true);
+		
+		admin.setConfirmationToken("ByAdmin");
+		
 		adminServiceImplementation.save(admin);
 		
 		// use a redirect to prevent duplicate submissions
