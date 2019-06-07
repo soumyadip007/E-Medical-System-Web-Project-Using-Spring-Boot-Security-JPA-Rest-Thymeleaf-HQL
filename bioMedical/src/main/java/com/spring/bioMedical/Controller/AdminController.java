@@ -55,7 +55,7 @@ public class AdminController {
 		return "admin/user";
 	}
 	
-	@RequestMapping("/admindetails")
+	@RequestMapping("/doctor-details")
 	public String adminDetails(Model model){
 		
 		
