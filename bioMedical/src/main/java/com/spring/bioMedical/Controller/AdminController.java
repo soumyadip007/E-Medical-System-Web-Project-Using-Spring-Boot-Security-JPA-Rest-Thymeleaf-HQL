@@ -46,10 +46,25 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/doctor-details")
-	public String adminDetails(Model model){
+	public String doctorDetails(Model model){
 		
 		
 		List<Admin> list=adminServiceImplementation.findByRole("ROLE_DOCTOR");
+		
+		
+		
+		// add to the spring model
+		model.addAttribute("user", list);
+		
+		
+		return "admin/doctor";
+	}
+	
+	@RequestMapping("/admin-details")
+	public String adminDetails(Model model){
+		
+		
+		List<Admin> list=adminServiceImplementation.findByRole("ROLE_ADMIN");
 		
 		
 		
