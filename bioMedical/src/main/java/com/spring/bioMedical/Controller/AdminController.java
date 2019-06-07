@@ -31,7 +31,7 @@ public class AdminController {
 	}
 	
 	
-	@RequestMapping("/userdetails")
+	@RequestMapping("/user-details")
 	public String index(Model model){
 		
 		
