@@ -39,16 +39,6 @@ public class AdminController {
 		
 		
 		
-		for (User user : list) {
-		
-//			 if (user.getRole().equalsIgnoreCase("ROLE_ADMIN")) {
-//			        list.remove(user);
-//			    }
-//		//	System.out.println(user);
-//			
-		}
-		
-		// add to the spring model
 		model.addAttribute("user", list);
 		
 		
