@@ -40,5 +40,10 @@ public class AdminServiceImplementation implements AdminService {
 		
 	}
 
+	@Override
+	public List<Admin> findByRole(String user) {
+		return adminRepository.findAll();
+	}
+
 	
 }
