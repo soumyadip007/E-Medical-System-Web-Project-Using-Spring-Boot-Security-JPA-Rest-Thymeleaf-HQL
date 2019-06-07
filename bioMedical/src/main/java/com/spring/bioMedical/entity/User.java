@@ -50,7 +50,19 @@ public class User {
 	@Column(name = "authority")
 	private String role;
 	
+	@Column(name = "lastseen")
+	private String lastseen;
 	
+	
+	
+	
+	public String getLastseen() {
+		return lastseen;
+	}
+
+	public void setLastseen(String lastseen) {
+		this.lastseen = lastseen;
+	}
 	
 	
 	public String getRole() {
@@ -131,7 +143,7 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", email=" + email + ", password=" + password + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", enabled=" + enabled + ", confirmationToken=" + confirmationToken
-				+ ", gender=" + gender + ", role=" + role + "]";
+				+ ", gender=" + gender + ", role=" + role + ", lastseen=" + lastseen + "]";
 	}
 
 	
