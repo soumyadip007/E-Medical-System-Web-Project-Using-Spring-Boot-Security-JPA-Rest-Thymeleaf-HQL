@@ -1,7 +1,7 @@
 package com.spring.bioMedical.Controller;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.spring.bioMedical.entity.*;
+
+import com.spring.bioMedical.entity.Admin;
 import com.spring.bioMedical.service.AdminServiceImplementation;
 import com.spring.bioMedical.service.UserService;
 
@@ -44,8 +45,10 @@ public class AdminController {
 		
 		
 		List<Admin> list=adminServiceImplementation.findByRole("ROLE_USER");
+		model.addAttribute("user", list);
 		
-		// get the employee from the service
+		
+		// get last seen
 		String username="";
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		if (principal instanceof UserDetails) {
@@ -61,16 +64,15 @@ public class AdminController {
 		
 		Admin admin = adminServiceImplementation.findByEmail(username);
 				 
-				 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-		         LocalDateTime now = LocalDateTime.now();  
-		       
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
 		         String log=now.toString();
 		    
 		         admin.setLastseen(log);
 		         
 		         adminServiceImplementation.save(admin);
 		
-		model.addAttribute("user", list);
 		
 		
 		return "admin/user";
