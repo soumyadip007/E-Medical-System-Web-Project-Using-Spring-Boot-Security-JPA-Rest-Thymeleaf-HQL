@@ -59,7 +59,7 @@ public class AdminController {
 	public String adminDetails(Model model){
 		
 		
-		List<com.spring.bioMedical.entity.Admin> list=adminServiceImplementation.findAll();
+		List<Admin> list=adminServiceImplementation.findAll();
 		
 		
 		
