@@ -31,11 +31,6 @@ public class AdminController {
 	public AdminController(UserService userService,AdminServiceImplementation obj ) {
 		this.userService = userService;
 		adminServiceImplementation=obj;
-		
-
-	
-		
- 		
 		 
 	}
 	

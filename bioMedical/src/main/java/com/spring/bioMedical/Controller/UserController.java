@@ -3,6 +3,7 @@ package com.spring.bioMedical.Controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -10,12 +11,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.bioMedical.entity.Admin;
+import com.spring.bioMedical.service.AdminServiceImplementation;
+import com.spring.bioMedical.service.UserService;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
+	private UserService userService;
+
+	private AdminServiceImplementation adminServiceImplementation;
 	
+	@Autowired
+	public UserController(UserService userService,AdminServiceImplementation obj ) {
+		this.userService = userService;
+		adminServiceImplementation=obj;
+		 
+	}
 	
 	@GetMapping("/index")
 	public String index(){
