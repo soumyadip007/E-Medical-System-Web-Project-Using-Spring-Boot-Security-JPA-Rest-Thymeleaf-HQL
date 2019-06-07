@@ -72,7 +72,7 @@ public class AdminController {
 		model.addAttribute("user", list);
 		
 		
-		return "admin/doctor";
+		return "admin/admin";
 	}
 	
 	
