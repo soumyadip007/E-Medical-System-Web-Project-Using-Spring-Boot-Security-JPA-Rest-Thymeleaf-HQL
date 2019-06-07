@@ -35,9 +35,9 @@ public class AdminController {
 	public String index(Model model){
 		
 		
-		List<User> list=userService.findAll();
+		List<Admin> list=adminServiceImplementation.findByRole("ROLE_USER");
 		
-		
+			
 		
 		model.addAttribute("user", list);
 		
