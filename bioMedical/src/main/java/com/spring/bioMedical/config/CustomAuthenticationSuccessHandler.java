@@ -1,8 +1,6 @@
 package com.spring.bioMedical.config;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Set;
 
 import javax.servlet.ServletException;
@@ -26,13 +24,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
  
         if (roles.contains("ROLE_ADMIN")) {
             httpServletResponse.sendRedirect("/admin/userdetails");
-            
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-            LocalDateTime now = LocalDateTime.now();  
-          
-            String log=now.toString();
-            
-        
         } 
         if (roles.contains("ROLE_DOCTOR")) {
             httpServletResponse.sendRedirect("/doctor/index");
