@@ -59,7 +59,7 @@ public class AdminController {
 	public String adminDetails(Model model){
 		
 		
-		List<Admin> list=adminServiceImplementation.findByRole("ROLE_ADMIN");
+		List<Admin> list=adminServiceImplementation.findByRole("ROLE_DOCTOR");
 		
 		
 		
