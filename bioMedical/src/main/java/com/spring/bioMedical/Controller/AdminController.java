@@ -1,5 +1,7 @@
 package com.spring.bioMedical.Controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,32 @@ public class AdminController {
 	public AdminController(UserService userService,AdminServiceImplementation obj ) {
 		this.userService = userService;
 		adminServiceImplementation=obj;
+		
+
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		// get the employee from the service
+		 Admin admin = adminServiceImplementation.findByEmail(username);
+		 
+		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+         LocalDateTime now = LocalDateTime.now();  
+       
+         String log=now.toString();
+    
+         admin.setLastseen(log);
+         
+         adminServiceImplementation.save(admin);
+ 		
+		 
 	}
 	
 	
