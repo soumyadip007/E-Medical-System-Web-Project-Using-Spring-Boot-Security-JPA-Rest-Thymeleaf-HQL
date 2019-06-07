@@ -51,6 +51,7 @@ public class User {
 	private String role;
 	
 	@Column(name = "lastseen")
+	@Transient
 	private String lastseen;
 	
 	

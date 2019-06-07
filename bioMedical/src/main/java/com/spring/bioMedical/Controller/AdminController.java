@@ -32,28 +32,8 @@ public class AdminController {
 		adminServiceImplementation=obj;
 		
 
-		String username="";
-		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		if (principal instanceof UserDetails) {
-		   username = ((UserDetails)principal).getUsername();
-		  String Pass = ((UserDetails)principal).getPassword();
-		  System.out.println("One + "+username+"   "+Pass);
-		} else {
-		 username = principal.toString();
-		  System.out.println("Two + "+username);
-		}
+	
 		
-		// get the employee from the service
-		 Admin admin = adminServiceImplementation.findByEmail(username);
-		 
-		 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-         LocalDateTime now = LocalDateTime.now();  
-       
-         String log=now.toString();
-    
-         admin.setLastseen(log);
-         
-         adminServiceImplementation.save(admin);
  		
 		 
 	}
@@ -65,7 +45,30 @@ public class AdminController {
 		
 		List<Admin> list=adminServiceImplementation.findByRole("ROLE_USER");
 		
-			
+		// get the employee from the service
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		  
+		  
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		Admin admin = adminServiceImplementation.findByEmail(username);
+				 
+				 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		         LocalDateTime now = LocalDateTime.now();  
+		       
+		         String log=now.toString();
+		    
+		         admin.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin);
 		
 		model.addAttribute("user", list);
 		
