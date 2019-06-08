@@ -29,6 +29,10 @@ public class Appointment {
 	@Column(name = "data")
 	private String date;
 	
+	@Column(name = "time")
+	private String time;
+	
+	
 	@Column(name = "description")
 	private String description;
 	
