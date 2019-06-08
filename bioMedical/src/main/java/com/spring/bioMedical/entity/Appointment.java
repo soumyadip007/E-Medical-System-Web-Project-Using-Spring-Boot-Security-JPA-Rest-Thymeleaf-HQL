@@ -95,6 +95,13 @@ public class Appointment {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Appointment [id=" + id + ", name=" + name + ", email=" + email + ", date=" + date + ", time=" + time
+				+ ", description=" + description + "]";
+	}
 	
 	
 
