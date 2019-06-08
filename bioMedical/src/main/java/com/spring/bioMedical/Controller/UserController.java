@@ -16,19 +16,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.spring.bioMedical.entity.Admin;
 import com.spring.bioMedical.entity.Appointment;
 import com.spring.bioMedical.service.AdminServiceImplementation;
-import com.spring.bioMedical.service.UserService;
+import com.spring.bioMedical.service.AppointmentServiceImplementation;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
-	private UserService userService;
+	private AppointmentServiceImplementation appointmentServiceImplementation;
 
 	private AdminServiceImplementation adminServiceImplementation;
 	
 	@Autowired
-	public UserController(UserService userService,AdminServiceImplementation obj ) {
-		this.userService = userService;
+	public UserController(AppointmentServiceImplementation obj1,AdminServiceImplementation obj ) {
+		appointmentServiceImplementation= obj1;
 		adminServiceImplementation=obj;
 		 
 	}
@@ -78,7 +78,7 @@ public class UserController {
 	@PostMapping("/save-app")
 	public String saveEmploye(@ModelAttribute("app") Appointment obj) {
 		
-		adminServiceImplementation.save(obj);
+		appointmentServiceImplementation.save(obj);
 		
 	
 		// use a redirect to prevent duplicate submissions
