@@ -59,9 +59,14 @@ public class UserController {
 		         
 		         adminServiceImplementation.save(admin);
 		
-		
+		 
 		         
 		 Appointment obj=new Appointment();
+		 
+		 obj.setName(admin.getFirstName()+" "+admin.getLastName());
+		 
+		 obj.setEmail(admin.getEmail());
+			
 		 
 		 model.addAttribute("app",obj);
 		
