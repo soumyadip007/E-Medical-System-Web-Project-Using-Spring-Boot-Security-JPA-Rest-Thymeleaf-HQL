@@ -77,6 +77,33 @@ public class AdminController {
 	public String doctorDetails(Model model){
 		
 		
+		// get last seen
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		  
+		  
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		Admin admin = adminServiceImplementation.findByEmail(username);
+				 
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
+		         String log=now.toString();
+		    
+		         admin.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin);
+		
+		
+		
 		List<Admin> list=adminServiceImplementation.findByRole("ROLE_DOCTOR");
 		
 		
@@ -92,6 +119,33 @@ public class AdminController {
 	public String adminDetails(Model model){
 		
 		
+		// get last seen
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		  
+		  
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		Admin admin = adminServiceImplementation.findByEmail(username);
+				 
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
+		         String log=now.toString();
+		    
+		         admin.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin);
+		
+		
+		         
 		List<Admin> list=adminServiceImplementation.findByRole("ROLE_ADMIN");
 		
 		
@@ -106,6 +160,33 @@ public class AdminController {
 	
 	@GetMapping("/add-doctor")
 	public String showFormForAdd(Model theModel) {
+		
+		
+		// get last seen
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		  
+		  
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		Admin admin1 = adminServiceImplementation.findByEmail(username);
+				 
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
+		         String log=now.toString();
+		    
+		         admin1.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin1);
+		
 		
 		// create model attribute to bind form data
 		Admin admin = new Admin();
@@ -142,6 +223,34 @@ public class AdminController {
 
 	@GetMapping("/add-admin")
 	public String showForm(Model theModel) {
+		
+		
+		// get last seen
+		String username="";
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		if (principal instanceof UserDetails) {
+		   username = ((UserDetails)principal).getUsername();
+		  String Pass = ((UserDetails)principal).getPassword();
+		  System.out.println("One + "+username+"   "+Pass);
+		  
+		  
+		} else {
+		 username = principal.toString();
+		  System.out.println("Two + "+username);
+		}
+		
+		Admin admin1 = adminServiceImplementation.findByEmail(username);
+				 
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
+		         String log=now.toString();
+		    
+		         admin1.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin1);
+		
+		
 		
 		// create model attribute to bind form data
 		Admin admin = new Admin();
@@ -186,11 +295,22 @@ public class AdminController {
 		} else {
 		 username = principal.toString();
 		  System.out.println("Two + "+username);
-		}
+		}	
 		
 		// get the employee from the service
-		 Admin admin = adminServiceImplementation.findByEmail(username);
-		 System.out.println(admin);
+		
+		Admin admin = adminServiceImplementation.findByEmail(username);
+				 
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
+		    Date now = new Date();  
+		    
+		         String log=now.toString();
+		    
+		         admin.setLastseen(log);
+		         
+		         adminServiceImplementation.save(admin);
+		
+		System.out.println(admin);
 		
 		theModel.addAttribute("profile", admin);
 		
