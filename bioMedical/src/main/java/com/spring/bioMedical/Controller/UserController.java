@@ -9,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.bioMedical.entity.Admin;
@@ -73,7 +75,17 @@ public class UserController {
 		return "user/index";
 	}
 	
+	@PostMapping("/save-app")
+	public String saveEmploye(@ModelAttribute("app") Appointment obj) {
+		
+		adminServiceImplementation.save(obj);
+		
+	
+		// use a redirect to prevent duplicate submissions
+		return "redirect:/admin/userdetails";
+	}
 
+	
 	@GetMapping("/about")
 	public String about(){
 
