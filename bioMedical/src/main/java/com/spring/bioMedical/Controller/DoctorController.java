@@ -72,6 +72,7 @@ public class DoctorController {
 		List<Appointment> list=appointmentServiceImplementation.findAll();
 		
 		
+		model.addAttribute("user",admin.getFirstName()+" "+admin.getLastName());
 		
 		// add to the spring model
 		model.addAttribute("app", list);
