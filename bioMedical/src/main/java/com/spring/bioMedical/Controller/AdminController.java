@@ -376,6 +376,6 @@ public class AdminController {
 		model.addAttribute("app", list);
 		
 		
-		return "admin/admin";
+		return "admin/appointment";
 	}
 }
