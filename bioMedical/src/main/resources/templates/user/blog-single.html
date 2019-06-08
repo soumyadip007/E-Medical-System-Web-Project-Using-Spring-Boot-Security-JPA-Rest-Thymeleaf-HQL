@@ -45,6 +45,14 @@
           <li class="nav-item"><a th:href="@{/user/blog}"  class="nav-link">Blog</a></li>
           <li class="nav-item"><a th:href="@{/user/contact}"  class="nav-link">Contact</a></li>
           <li class="nav-item cta"><a  class="nav-link" data-toggle="modal" data-target="#modalAppointment"><span>Make an Appointment</span></a></li>
+     
+      <li class="nav-item ">
+         <form  th:action="@{/logout}"  method="POST">
+					
+	
+			<button type="submit"  class="btn btn-danger">Logout</button>   
+			</form>
+			</li>
         </ul>
       </div>
     </div>
