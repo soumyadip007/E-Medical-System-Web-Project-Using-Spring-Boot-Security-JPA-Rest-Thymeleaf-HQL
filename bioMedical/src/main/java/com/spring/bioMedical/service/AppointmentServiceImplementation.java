@@ -3,8 +3,7 @@ package com.spring.bioMedical.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.spring.bioMedical.entity.Admin;
-import com.spring.bioMedical.repository.AdminRepository;
+import com.spring.bioMedical.entity.Appointment;
 import com.spring.bioMedical.repository.AppointmentRepository;
 
 @Service
@@ -20,10 +19,10 @@ public class AppointmentServiceImplementation  {
 	}
 	
 	
-	public void save(Admin admin)
+	public void save(Appointment app)
 	{
 		
-		appointmentRepository.save(admin);
+		appointmentRepository.save(app);
 	}
 
 
