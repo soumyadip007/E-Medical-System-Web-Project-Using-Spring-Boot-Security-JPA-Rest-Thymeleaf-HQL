@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.bioMedical.entity.Admin;
+import com.spring.bioMedical.entity.Appointment;
 import com.spring.bioMedical.service.AdminServiceImplementation;
 import com.spring.bioMedical.service.UserService;
 
@@ -30,7 +32,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/index")
-	public String index(){
+	public String index(Model model){
 		
 		// get last seen
 		String username="";
@@ -58,6 +60,10 @@ public class UserController {
 		         adminServiceImplementation.save(admin);
 		
 		
+		         
+		 Appointment obj=new Appointment();
+		 
+		 model.addAttribute("app",obj);
 		
 		return "user/index";
 	}
