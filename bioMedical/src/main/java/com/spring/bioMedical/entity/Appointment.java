@@ -20,13 +20,13 @@ public class Appointment {
 	@Column(name = "id")
 	private int id;
 	
-	@Column(name = "username", nullable = false, unique = true)
+	@Column(name = "name", nullable = false, unique = true)
 	private String name;
 	
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "data")
+	@Column(name = "date")
 	private String date;
 	
 	@Column(name = "time")
