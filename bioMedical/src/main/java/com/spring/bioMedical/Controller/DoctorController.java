@@ -71,6 +71,10 @@ public class DoctorController {
 		         
 		List<Appointment> list=appointmentServiceImplementation.findAll();
 		
+		model.addAttribute("name",admin.getFirstName());
+		
+		model.addAttribute("email",admin.getEmail());
+		
 		
 		model.addAttribute("user",admin.getFirstName()+" "+admin.getLastName());
 		

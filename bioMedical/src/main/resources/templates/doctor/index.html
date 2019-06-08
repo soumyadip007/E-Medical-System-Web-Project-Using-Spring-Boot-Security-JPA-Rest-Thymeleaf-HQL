@@ -74,7 +74,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="../doctor/images/icon/logo.png" alt="Cool Admin" />
+                    <img src="../doctor/images/icon/logo.png" alt="Doctor+" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -122,7 +122,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="#">  <p th:text="${name}" >Test</p></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -133,9 +133,10 @@
                                                 </div>
                                                 <div class="content">
                                                     <h5 class="name">
-                                                       ${param.user}
+                                                         <p th:text="${user}" >Test</p>
+
                                                     </h5>
-                                                    <span class="email">johndoe@example.com</span>
+                                                    <span class="email">  <p th:text="${email}" /></span>
                                                 </div>
                                             </div>
                                             
