@@ -69,6 +69,7 @@ public class UserController {
 		 
 		 obj.setEmail(admin.getEmail());
 			
+		 System.out.println(obj);
 		 
 		 model.addAttribute("app",obj);
 		
@@ -82,7 +83,7 @@ public class UserController {
 		
 	
 		// use a redirect to prevent duplicate submissions
-		return "redirect:/admin/userdetails";
+		return "redirect:/user/index";
 	}
 
 	
