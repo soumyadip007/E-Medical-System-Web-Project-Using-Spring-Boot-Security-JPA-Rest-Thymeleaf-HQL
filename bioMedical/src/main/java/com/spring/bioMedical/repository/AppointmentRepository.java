@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.bioMedical.entity.Appointment;
 
-@Repository("adminRepository")
+@Repository("appointmentRepository")
 public interface AppointmentRepository extends JpaRepository<Appointment, Long> {
 
 }
