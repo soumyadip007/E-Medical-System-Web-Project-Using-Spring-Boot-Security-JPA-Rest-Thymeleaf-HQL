@@ -11,6 +11,5 @@ import com.spring.bioMedical.entity.User;
 @Repository("appointmentRepository")
 public interface AppointmentRepository extends JpaRepository<Appointment, Integer> {
 
-	 
-	  List<Appointment> findAll();
+	
 }
