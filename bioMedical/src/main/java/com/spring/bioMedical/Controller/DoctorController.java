@@ -2,15 +2,19 @@ package com.spring.bioMedical.Controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.spring.bioMedical.entity.Admin;
+import com.spring.bioMedical.entity.Appointment;
 import com.spring.bioMedical.service.AdminServiceImplementation;
+import com.spring.bioMedical.service.AppointmentServiceImplementation;
 import com.spring.bioMedical.service.UserService;
 
 @Controller
@@ -21,17 +25,23 @@ public class DoctorController {
 
 	private AdminServiceImplementation adminServiceImplementation;
 	
+	private AppointmentServiceImplementation appointmentServiceImplementation;
+
+	
 	@Autowired
-	public DoctorController(UserService userService,AdminServiceImplementation obj ) {
+	public DoctorController(UserService userService,AdminServiceImplementation obj,
+			AppointmentServiceImplementation app) {
 		this.userService = userService;
 		adminServiceImplementation=obj;
-		 
+		appointmentServiceImplementation=app;
 	}
 	
 	
 	@RequestMapping("/index")
-	public String index(){
+	public String index(Model model){
 
+	
+		
 		// get last seen
 		String username="";
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -58,6 +68,13 @@ public class DoctorController {
 		         adminServiceImplementation.save(admin);
 		
 		
+		         
+		List<Appointment> list=appointmentServiceImplementation.findAll();
+		
+		
+		
+		// add to the spring model
+		model.addAttribute("app", list);
 		
 		return "doctor/index";
 	}
