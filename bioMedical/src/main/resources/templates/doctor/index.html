@@ -11,7 +11,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Tables</title>
+    <title>Doctor Dashboard</title>
 
     <!-- Fontfaces CSS-->
     <link href="../doctor/css/font-face.css" rel="stylesheet" media="all">
@@ -43,8 +43,8 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="../doctor/images/d.png" alt="CoolAdmin" />
+                        <a class="logo" th:href="@{/doctor/index}">
+                            <img src="../doctor/images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -60,8 +60,8 @@
                         
                        
                         <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
+                           <a th:href="@{/doctor/index}" >
+                                <i  class="fas fa-table"></i>Appointments</a>
                         </li>
                        
                     </ul>
@@ -73,8 +73,8 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="../doctor/images/d.png" alt="Doctor+" />
+                <a th:href="@{/doctor/index}">
+                    <img src="../doctor/images/icon/logo.png" alt="Doctor+" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -83,9 +83,9 @@
                        
                        
                         <li class="active">
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>Tables</a>
-                        </li>
+                     <a th:href="@{/doctor/index}" >
+                                <i  class="fas fa-table"></i>Appointments</a>
+                          </li>
                        
                        
                     </ul>
