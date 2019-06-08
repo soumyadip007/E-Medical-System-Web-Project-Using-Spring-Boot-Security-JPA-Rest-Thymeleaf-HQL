@@ -36,6 +36,22 @@ public class Appointment {
 	@Column(name = "description")
 	private String description;
 
+	
+	@Column(name = "regtime")
+	@Transient
+	private String regtime;
+
+	
+
+	public String getRegtime() {
+		return regtime;
+	}
+
+
+	public void setRegtime(String regtime) {
+		this.regtime = regtime;
+	}
+
 
 	public int getId() {
 		return id;
