@@ -82,6 +82,6 @@ oc expose springboot-sample-app --hostname=www.example.com
 <img src="./bioMedical/img/23.png" >
 
 
-## Copyright
+## Copyright @soumyadip007
 
 Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
