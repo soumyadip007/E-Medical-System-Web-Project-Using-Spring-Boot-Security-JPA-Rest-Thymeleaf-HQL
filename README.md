@@ -49,7 +49,7 @@ oc expose springboot-sample-app --hostname=www.example.com
 
 <img src="./bioMedical/img/1.png" >
 
-# -----------USER Access-----------
+# User Panel :
 
 <img src="./bioMedical/img/2.png" >
 <img src="./bioMedical/img/3.png" >
@@ -62,9 +62,16 @@ oc expose springboot-sample-app --hostname=www.example.com
 <img src="./bioMedical/img/10.png" >
 <img src="./bioMedical/img/11.png" >
 <img src="./bioMedical/img/12.png" >
+
+# Doctor Panel (Dashboard Access):
+
+
 <img src="./bioMedical/img/13.png" >
 <img src="./bioMedical/img/14.png" >
-<img src="./bioMedical/img/15.png" 
+
+# Master Admin Panel (Dashboard Access):
+
+<img src="./bioMedical/img/15.png" >
 <img src="./bioMedical/img/16.png" >
 <img src="./bioMedical/img/17.png" >
 <img src="./bioMedical/img/18.png" >
