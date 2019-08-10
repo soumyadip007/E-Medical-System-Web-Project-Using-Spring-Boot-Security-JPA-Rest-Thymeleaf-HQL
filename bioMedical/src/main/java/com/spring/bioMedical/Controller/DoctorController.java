@@ -17,6 +17,11 @@ import com.spring.bioMedical.service.AdminServiceImplementation;
 import com.spring.bioMedical.service.AppointmentServiceImplementation;
 import com.spring.bioMedical.service.UserService;
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ *
+ */
 @Controller
 @RequestMapping("/doctor")
 public class DoctorController {

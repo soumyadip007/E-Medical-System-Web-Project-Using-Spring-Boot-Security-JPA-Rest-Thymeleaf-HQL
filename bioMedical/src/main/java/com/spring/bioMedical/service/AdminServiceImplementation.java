@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service;
 import com.spring.bioMedical.entity.Admin;
 import com.spring.bioMedical.repository.AdminRepository;
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
+ */
 @Service
 public class AdminServiceImplementation implements AdminService {
 

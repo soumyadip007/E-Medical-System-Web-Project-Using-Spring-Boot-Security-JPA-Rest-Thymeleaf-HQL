@@ -11,6 +11,12 @@ import javax.validation.constraints.NotEmpty;
 
 import org.springframework.data.annotation.Transient;
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
+ */
 @Entity
 @Table(name = "app")
 public class Appointment {

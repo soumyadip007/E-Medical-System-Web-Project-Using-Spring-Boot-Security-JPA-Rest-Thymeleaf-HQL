@@ -11,6 +11,12 @@ import org.springframework.stereotype.Service;
 import com.spring.bioMedical.entity.User;
 import com.spring.bioMedical.repository.UserRepository;
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
+ */
 @Service("userService")
 public class UserService {
 

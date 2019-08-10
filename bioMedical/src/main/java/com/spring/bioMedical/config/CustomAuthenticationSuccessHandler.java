@@ -13,6 +13,12 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
+ */
 @Configuration
 public class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
  
