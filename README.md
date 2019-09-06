@@ -94,8 +94,16 @@ oc expose springboot-sample-app --hostname=www.example.com
 ```
 Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
 
+# #Java Software (AWT/Swing/JavaFx/JDBC)
 
-# #J2EE (JSP/Servlet/JSTL/JDBC Projects)
+- [Java Swing 4 Projects Book selling system,Stadium Management,Chatbot etc](https://github.com/soumyadip007/Java-JavaFx-Swing-Projects-Desktop-Application-GUI-Software)
+
+- [School Management System Software](https://github.com/soumyadip007/School-Management-System-GUI-Software-Using-Java-Swing-AWT-JDBC-JTatoo-MySql)
+
+- [Java Swing Complete tutorial with example for JavaGuides.net]https://github.com/soumyadip007/Java-Swing-tutorials-and-examples-for-JavaGuides.net)
+
+
+*J2EE (JSP/Servlet/JSTL/JDBC Projects)*
 
 - [E-Market Place OLX-Clone](https://github.com/soumyadip007/E-Marketplace-for-buying-and-reselling-products-Web-Project-Using-JSP-Servlet-Jstl-Security-Jdbc)
 
@@ -103,7 +111,9 @@ Released under the Apache License 2.0. See the [LICENSE](https://github.com/code
 
 - [Post-Disaster Management & Women Safety Project](https://github.com/soumyadip007/Post-Disaster-Management-and-Women-safety-Hackathon-JSP-Servlet-MySql-Bootstrap-GoogleMapApi-OSM)
 
-*https://Lightningspeedmatchmaker.com (in Private repo for security purposes)
+- [Aim-India-Foundation-NGO-Live-Website](Aim-India-Foundation-WebDev-Internship-Using-Jsp-Servlet-Jstl-Jdbc-MySql-Bootstrap)
+
+*https://Lightningspeedmatchmaker.com* (in Private repo for security/commercial purposes,USA project)
 
 
 # #Spring & Hibernte (Codes & Projects)
@@ -134,7 +144,9 @@ Released under the Apache License 2.0. See the [LICENSE](https://github.com/code
 
 - [SpringBoot-Angular8-Login-Registration](https://github.com/soumyadip007/SpringBoot-Angular8-Login-Registration-for-JavaGuides.net)
 
-# #Angular8
+*Pujo Direction* (Android/WEB(Spring Boot, MVC, REST, Security, Hibernate, JPA, Thymeleaf) http://pujodir.cloudjiffy.net/Pujo-Direction(App Store)) (in Private repo for security purposes)
+
+# #Angular8 (Codes & Projects)
 
 - [Angular8-Data-Event-Binding-Directives-Pipes-Form-Validation-Security-HTTP-Service-Routing](https://github.com/soumyadip007/Angular-8-Data-Event-Binding-Directives-Pipes-Form-Validation-Security-HTTP-Service-Routing)
 
@@ -147,3 +159,11 @@ Released under the Apache License 2.0. See the [LICENSE](https://github.com/code
 - [Shopping-Cart-System-using-Angular-8-Auth-Module-Firebase (Mini Project)](https://github.com/soumyadip007/Shopping-Cart-System-using-Angular-8-Auth-Module-Firebase)
 
 - [SpringBoot-Angular8-Login-Registration](https://github.com/soumyadip007/SpringBoot-Angular8-Login-Registration-for-JavaGuides.net)
+
+# #Other Works
+
+- [DBJ.jar (Framework for JDBC/On progress)](https://github.com/soumyadip007/DBJ.jar)
+
+- [Ofline Route Builder & DTN (On progress)](https://github.com/soumyadip007/Offline-Route-Builder-DTN-Messenger-Android-GPS-OSM)
+
+# #Wiki: https://github.com/soumyadip007/E-Medical-System-Web-Project-Using-Spring-Boot-Security-MVC-Hibernate-JPA-Rest-Thymeleaf-HQL/wiki
