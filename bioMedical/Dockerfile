@@ -1,2 +1,2 @@
 FROM openjdk:8
-ADD target/
+ADD target/spring-boot-maven-plugin.jar spring-boot-maven-plugin.jar
