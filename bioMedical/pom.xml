@@ -80,7 +80,7 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>bio-docker</artifactId>
 			</plugin>
 		</plugins>
 	</build>
