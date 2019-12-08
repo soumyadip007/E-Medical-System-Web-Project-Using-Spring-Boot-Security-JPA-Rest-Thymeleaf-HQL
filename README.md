@@ -58,6 +58,8 @@ oc expose springboot-sample-app --hostname=www.example.com
 <img src="./bioMedical/img/3.png" >
 <img src="./bioMedical/img/4.png" >
 <img src="./bioMedical/img/5.png" >
+
+# Screenshots
 <img src="./bioMedical/img/6.png" >
 <img src="./bioMedical/img/7.png" >
 <img src="./bioMedical/img/8.png" >
